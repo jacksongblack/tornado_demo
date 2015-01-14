@@ -13,7 +13,7 @@ def main():
     tornado.options.parse_command_line()
     http_server = tornado.httpserver.HTTPServer(Application())
     http_server.listen(options.port)
-    print("server on")
+    print(''.join(('server run  port on ',options.port)))
     tornado.ioloop.IOLoop.instance().start()
 
 
