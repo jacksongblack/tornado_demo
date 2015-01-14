@@ -2,7 +2,6 @@
 
 import urls
 import tornado.web
-import os.path
 import config
 
 SETTINGS = dict(
@@ -13,6 +12,6 @@ SETTINGS = dict(
 
 class Application(tornado.web.Application):
     def __init__(self):
-        handlers = urls
+        handlers = urls.urls
         settings = SETTINGS
-        tornado.web.Application.__init__(self, handlers, **settings)
+        super(Application, self).__init__(handlers, **settings)
