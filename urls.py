@@ -1,7 +1,7 @@
 # coding=utf-8
-
-from handlers.user import UserHandler
+# 项目路由配置
+import handlers
 
 urls = [
-    (r'/user', UserHandler),
+    (r'/user', handlers.UserHandler),
 ]
