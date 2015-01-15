@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(__file__)
 # 模板文件根目录配置
 TEMPLATE_DIR = ''.join((BASE_DIR, "/template/"))
-#静态文件根目录配置
+# 静态文件根目录配置
 STATIC_DIR = ''.join((BASE_DIR, '/static/'))
 #运行IP与端口配置
 ADDRESS = {
@@ -18,4 +18,5 @@ MYSQL_SETTINGS = {
     'username': "root",
     'password': "root"
 }
+#安全cookie设置
 COOKIE_SECRET = 'unicode'

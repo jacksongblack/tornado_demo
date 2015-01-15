@@ -27,8 +27,8 @@ class BaseModel(object):
         result = ''
         for field_name, field_value in kwargs.items():
             if field_name in self.KEYS:
-                sql_tempate = 'SELECT * FROM %s where %s = %s' % (self.TABLE_NAME, field_name, field_value)
-                result = self.connection().get(sql_tempate)
+                sql_template = 'SELECT * FROM %s where %s = %s' % (self.TABLE_NAME, field_name, field_value)
+                result = self.connection().get(sql_template)
         self.close()
         return result
 
