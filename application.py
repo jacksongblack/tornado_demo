@@ -7,6 +7,7 @@ import config
 SETTINGS = dict(
     template_path=config.TEMPLATE_DIR,
     static_path=config.STATIC_DIR,
+    cookie_secret=config.COOKIE_SECRET
 )
 
 
