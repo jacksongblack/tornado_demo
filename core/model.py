@@ -8,19 +8,29 @@ class BaseModel(object):
 
     def __init__(self, **fields):
         settings = config.MYSQL_SETTINGS
-        self.db = Connection(settings.get('host'), settings.get('database_name'), user=settings.get('username'),
-                             password=settings.get("password"))
+        self.host = settings.get('host')
+        self.database_name = settings.get('database_name')
+        self.user = settings.get('username')
+        self.password = settings.get('password')
 
     def __del__(self):
         self.db.close()
 
+    def connection(self):
+        self.db = Connection(self.host, self.database_name, user=self.user, password=self.password)
+        return self.db
+
+    def close(self):
+        self.db.close()
+
     def get(self, **kwargs):
-        refult = ''
+        result = ''
         for field_name, field_value in kwargs.items():
             if field_name in self.KEYS:
                 sql_tempate = 'SELECT * FROM %s where %s = %s' % (self.TABLE_NAME, field_name, field_value)
-                refult = self.db.get(sql_tempate)
-        return refult
+                result = self.connection().get(sql_tempate)
+        self.close()
+        return result
 
     def query(self, **kwargs):
         pass
