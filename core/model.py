@@ -22,7 +22,7 @@ class BaseModel(object):
 
     def close(self):
         self.db.close()
-
+        
     def get(self, **kwargs):
         result = ''
         for field_name, field_value in kwargs.items():
