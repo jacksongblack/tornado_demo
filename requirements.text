@@ -3,4 +3,5 @@
 tornado==4.0.2
 torndb==0.3
 mysql-python==1.2.5
+unittest2==0.8.0
 

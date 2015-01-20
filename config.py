@@ -11,8 +11,10 @@ ADDRESS = {
     'port': '3000',
     'ip': '127.0.0.1'
 }
+# 单元测试文件目录
+TEST_DIR = ''.join((BASE_DIR, '/tests/'))
 
-#MYSQL配置
+# MYSQL配置
 MYSQL_SETTINGS = {
     'host': "127.0.0.1:3306",
     'database_name': "crm",
