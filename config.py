@@ -21,7 +21,13 @@ MYSQL_SETTINGS = {
     'username': "root",
     'password': "root"
 }
-#安全cookie设置
+# redis配置
+
+REDIS_SETTINGS = {
+    'host': "127.0.0.1",
+    'port': "6379",
+}
+# 安全cookie设置
 COOKIE_SECRET = 'unicode'
 XSRF_COOKIE = True
 LOGIN_URL = "/login"

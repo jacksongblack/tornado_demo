@@ -47,4 +47,7 @@ class BaseModel(object):
             '=': ""
         }
         sql_tempate = 'SELECT * FROM %s' % (cls._TABLE_NAME,)
+    @classmethod
+    def create_table(cls):
+        pass
 
