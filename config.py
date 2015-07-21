@@ -17,7 +17,7 @@ TEST_DIR = ''.join((BASE_DIR, '/tests/'))
 # MYSQL配置
 MYSQL_SETTINGS = {
     'host': "127.0.0.1:3306",
-    'database_name': "crm",
+    'database_name': "DrivingExam",
     'username': "root",
     'password': "root"
 }

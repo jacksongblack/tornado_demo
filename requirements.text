@@ -1,6 +1,6 @@
  #项目依赖库                                                                 
- --index-url http://pypi.python.org/simple  
-tornado==4.0.2
+--index-url http://pypi.python.org/simple
+tornado==4.2.1
 torndb==0.3
 mysql-python==1.2.5
 unittest2==0.8.0
