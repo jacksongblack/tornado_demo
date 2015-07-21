@@ -60,11 +60,14 @@ def main():
 
 if __name__ == "__main__":
     import sys, unittest2
+    try:
+        if sys.argv[1] in "run":
+            main()
 
-    if sys.argv[1] in "run":
-        main()
 
-
-    elif sys.argv[1] in "test":
-        suite = unittest2.TestLoader().discover(config.TEST_DIR, pattern='test_*.py')
-        unittest2.TextTestRunner(verbosity=2).run(suite)
+        elif sys.argv[1] in "test":
+            suite = unittest2.TestLoader().discover(config.TEST_DIR, pattern='test_*.py')
+            unittest2.TextTestRunner(verbosity=2).run(suite)
+    except IndexError:
+        print("Usage: 1.python runserver run  start on server starting \n"
+              "       2.python manager.py test on testing  ")
