@@ -60,6 +60,7 @@ def main():
 
 if __name__ == "__main__":
     import sys, unittest2
+
     try:
         if sys.argv[1] in "run":
             main()

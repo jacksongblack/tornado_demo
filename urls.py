@@ -5,4 +5,5 @@ import handlers
 urls = [
     (r'/user', handlers.UserHandler),
     (r'/room', handlers.RoomWebHandler),
+    (r'/websocket', handlers.ChatHandler),
 ]
