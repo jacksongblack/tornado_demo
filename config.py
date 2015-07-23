@@ -26,6 +26,7 @@ MYSQL_SETTINGS = {
 REDIS_SETTINGS = {
     'host': "127.0.0.1",
     'port': "6379",
+    'selected_db': 1,
 }
 # 安全cookie设置
 COOKIE_SECRET = 'unicode'
