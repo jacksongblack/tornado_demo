@@ -1,0 +1,29 @@
+{% extends ../public/base.html %}
+{% block body %}
+<div class="header">
+    <div class="lift"></div>
+    <div class="right"></div>
+</div>
+<div class="content">
+    <div class="messageBox" id="messageBox"></div>
+    <div class="sendBox">
+        <form class="sendForm" id="sendForm"><input type="text" name="message" class="message" placeholder="请输入信息"><input type="submit"
+                                                                                                          value="发送">
+        </form>
+    </div>
+</div>
+<script>
+    var ws = new WebSocket("ws://127.0.0.1:3000/websocket")
+    ws.onopen = function () {
+        ws.send("Hello, world");
+    };
+    ws.onmessage = function (evt) {
+        $("#messageBox").append(evt.data)
+    };
+    $('#sendForm').submit(function () {
+        var data =$(this).find('input.message').val();
+        ws.send(data);
+        return false
+    })
+</script>
+{% end %}
