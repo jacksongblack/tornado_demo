@@ -5,6 +5,7 @@
 *~
 build/
 dist/*
+/dist/
 MANIFEST
 /tornado.egg-info/
 .tox/
@@ -24,3 +25,7 @@ src/static/css/main.css.map
 .sass-cache/
 src/config.yml
 src/adminManage/settings.py
+/env/
+# Used in demo apps
+secrets.cfg
+.idea/

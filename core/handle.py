@@ -51,3 +51,7 @@ class BaseHandler(web.RequestHandler):
     @property
     def cache(self):
         return self.application.cache
+import tornado.web
+
+class BaseHandler(tornado.web.RequestHandler):
+    pass
